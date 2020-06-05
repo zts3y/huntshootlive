@@ -1,46 +1,44 @@
 <style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
-
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
+  #latest-content {
+	display: flex;
+	justify-content: space-evenly;
+  }
+  #latest-content > div {
+	  width: 480px;
+	  padding: 16px;
+	  margin: 16px 0px;
+	  background: #B3B6B9;
+	  border-radius: 10px;
+	  display: flex;
+	  flex-direction: column;
+  }
+  .youtube-preview img {
+    width: 480px;
+    height: 268px;
+    object-fit: cover;
+  }
+  .podcast-preview img {
+	 
+    height: 268px;
+    object-fit: contain;
+  }
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+  <title>Hunt Shoot Live</title>
 </svelte:head>
 
-<h1>Great success!</h1>
-
-<figure>
-	<img alt='Success Kid' src='successkid.jpg'>
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<div id="latest-content">
+  <div class="youtube-preview">
+    <h2>Latest Video</h2>
+    <h3>Groundhog Killshot Compilation...Exploding Varmints Vol. 2!!!</h3>
+    <img alt="" src="https://i.ytimg.com/vi/AS7Orz3TI6I/hqdefault.jpg" />
+  </div>
+  <div class="podcast-preview">
+    <h2>Latest Podcast</h2>
+    <h3>Custom AR Builds - Tips and Tricks</h3>
+    <img
+      alt=""
+      src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/5180499/5180499-1588528501392-1d2f4507c8e23.jpg" />
+  </div>
+</div>
