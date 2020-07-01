@@ -1,25 +1,31 @@
+<script>
+  import Image from 'svelte-image';
+  let HSLSocial = "HSLSocial.jpg";
+</script>
+
 <style>
   #latest-content {
 	display: flex;
 	justify-content: space-evenly;
   }
   #latest-content > div {
-	  width: 480px;
+	  width: 430px;
 	  padding: 16px;
 	  margin: 16px 0px;
-	  background: #B3B6B9;
+	  background: var(--light-grey);
 	  border-radius: 10px;
 	  display: flex;
-	  flex-direction: column;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .youtube-preview img {
-    width: 480px;
-    height: 268px;
+    width: 430px;
+    height: 218px;
     object-fit: cover;
   }
   .podcast-preview img {
 	 
-    height: 268px;
+    height: 218px;
     object-fit: contain;
   }
 </style>
@@ -39,6 +45,6 @@
     <h3>Custom AR Builds - Tips and Tricks</h3>
     <img
       alt=""
-      src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/5180499/5180499-1588528501392-1d2f4507c8e23.jpg" />
+      src={HSLSocial} />
   </div>
 </div>

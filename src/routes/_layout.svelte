@@ -1,5 +1,6 @@
 <script>
   import Nav from "../components/Nav.svelte";
+  import Image from 'svelte-image';
   let bgImage = "background.jpg";
   export let segment;
 </script>
@@ -7,10 +8,10 @@
 <style>
   main {
     position: relative;
-    max-width: 100vw;
+    max-width: calc(100vw);
     height: calc(100vh);
-    background-color: #21201F;
-    margin: 0 auto;
+    background-color: var(--dark-grey);
+    margin: 0;
     box-sizing: border-box;
   }
   header {
@@ -18,23 +19,25 @@
     flex-direction: column;
     justify-items: center;
     min-height: 300px;
+    background-image: url('/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 100% 34%;
   }
   #hero {
-	height: calc(300px - 53px);
+  height: calc(300px - 53px);
+  max-width: 100vw;
 	display: flex;
 	justify-content: center;
   }
   #hero #logo{
-	 
-	  padding: 1em;
+    max-width: calc(100vw - 2em);
+	  padding: 1em 0 1em 0;
   }
 </style>
 
 <main>
-  <header style="background-image: url('{bgImage}')">
+  <header>
     <Nav {segment} />
     <div id="hero">
       <img id="logo" alt="Hunt Shoot Live Logo" src="Badge.svg" />
