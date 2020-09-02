@@ -19,7 +19,7 @@
     flex-direction: column;
     justify-items: center;
     min-height: 300px;
-    background-image: url('/background.jpg');
+    background-image: url('/background-med.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 100% 34%;
