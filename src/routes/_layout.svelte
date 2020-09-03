@@ -4,7 +4,9 @@
   let bgImage = "background.jpg";
   export let segment;
 </script>
-
+<svelte:head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</svelte:head>
 <style>
   main {
     position: relative;
@@ -13,16 +15,16 @@
     background-color: var(--dark-grey);
     margin: 0;
     box-sizing: border-box;
+    background-image: url('/background-med.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 34%;
   }
   header {
     display: flex;
     flex-direction: column;
     justify-items: center;
     min-height: 300px;
-    background-image: url('/background-med.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100% 34%;
   }
   #hero {
   height: calc(300px - 53px);
